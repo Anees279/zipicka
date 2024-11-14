@@ -65,6 +65,17 @@ $(document).ready(function () {
       initSlider();
   });
 });
+// nav bar scrolled
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {  // Adjust scroll threshold if necessary
+          navbar.classList.add("scrolled");
+      } else {
+          navbar.classList.remove("scrolled");
+      }
+  });
+});
 
 // for faq
 function toggleAnswer(index) {
@@ -82,14 +93,7 @@ function toggleAnswer(index) {
       icon.classList.add("fa-chevron-down");
   }
 }
-document.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-      navbar.classList.add("navbar-scrolled");
-  } else {
-      navbar.classList.remove("navbar-scrolled");
-  }
-});
+
 
 
 
