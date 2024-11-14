@@ -78,6 +78,11 @@ body {
 
 .navbar-nav {
   gap: 9px;
+  
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0); /* Transparent */
+  transition: background-color 0.3s ease;
 }
 
 .logo img {
@@ -109,9 +114,10 @@ select {
   font-family: inherit; /* Optional: Use the same font as the surrounding text */
 }
 /* Dark text color for all navbar links */
-.navbar .nav-link,
-.navbar {
+.navbar .nav-link
+{
   color: #212529 !important;
+  font-size: 1.2rem;
 }
 
 
@@ -129,9 +135,7 @@ select {
 }
 
 
-.navbar .nav-link {
-  font-size: 1.2rem;
-}
+
 
 /* Underline dropdown items on hover */
 .dropdown-menu {
@@ -151,9 +155,16 @@ select {
   border: none;
 }
 .hero_section {
+  
   width: 100%;
   height: auto; /* Full viewport height */
   overflow: hidden; /* Prevent overflow */
+}
+.hero {
+  width: 100vw; /* Full width */
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden;  */
 }
 
 /* Responsive images inside the slider */
@@ -196,13 +207,13 @@ select {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 1); /* Solid background */
+  background-color: rgba(255, 255, 255, 0); /* Transparent */
   transition: background-color 0.3s ease;
 }
 
-/* Transparent navbar on scroll */
-.navbar-transparent {
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent effect */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity as desired */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
 }
 .Slide_1 img{
  
@@ -452,7 +463,31 @@ footer a:hover {
   object-fit: contain; /* Ensures no cropping */
   border-radius: 50%; /* Circle shape */
   margin-left: 50px;
+  
 }
+.hero{
+height: 50vh;
+} 
+.Slide_1 img {
+  height: 50vh; /* Adjust the image height as well */
+}
+
   
 }
 /* For small devices only (max-width: 576px) */
+.navbar {
+  background-color: rgba(255, 255, 255, 0); /* Transparent */
+  transition: background-color 0.3s ease;
+}
+
+/* Scrolled state with a semi-transparent background */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* To test scrolling */
+.content {
+  height: 2000px;
+  background: linear-gradient(white, lightgray);
+}
